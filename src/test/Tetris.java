@@ -62,7 +62,7 @@ public class Tetris {
             int shapeIndex = random.nextInt(SHAPES.length);
             currentShape = SHAPES[shapeIndex];
             currentColor = COLORS[shapeIndex];
-            currentX = BOARD_WIDTH / 2 - currentShape[0].length / 2;
+            currentX = random.nextInt(BOARD_WIDTH - currentShape[0].length + 1);
             currentY = 0;
 
             if (!canPlaceShape(currentX, currentY)) {
@@ -174,4 +174,3 @@ public class Tetris {
         });
     }
 }
-
