@@ -1,4 +1,4 @@
-package test;
+package zad_z_lab;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,7 +7,9 @@ import java.awt.event.MouseEvent;
 
 public class UciekajacyPrzycisk {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
+        SwingUtilities.invokeLater(() -> createAndShowGUI());
+    }
+    private static void createAndShowGUI() {
             JFrame frame = new JFrame("Uciekający Przycisk");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(800, 600);
@@ -49,8 +51,9 @@ public class UciekajacyPrzycisk {
             });
 
             panel.add(przycisk);
+            frame.setLocationRelativeTo(null);
             frame.setVisible(true);
-        });
+        }
     }
-}
+
 

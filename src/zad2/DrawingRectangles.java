@@ -6,6 +6,13 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+Zadanie 2.
+
+Program tworzy prostokąty poprzez naciśnięcie i przeciągnięcie myszką po panelu.
+Później, trzymając wciśnięty dowolny przycisk myszy (na wybranym prostokącie), można go przesuwać.
+ */
+
 public class DrawingRectangles {
 
     public static void main(String[] args) {

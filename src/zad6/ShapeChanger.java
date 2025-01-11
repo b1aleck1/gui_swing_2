@@ -6,13 +6,23 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+Zadanie 6.
+
+Program umożliwia przesuwanie figur za pomocą strzałek.
+Aktualnie wybrana figura posiada czerwone obramowanie.
+Przy wciśnięciu klawisza Ctrl kolor wybranej figury zmienia się na niebieski,
+a po puszczeniu na zielony.
+Wciśnięcie klawisza Shift powoduje zmianę kształtu figury na owal i odwrotnie.
+ */
+
 public class ShapeChanger {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> createAndShowGUI());
     }
 
     private static void createAndShowGUI() {
-        JFrame frame = new JFrame("Shape Mover Interface");
+        JFrame frame = new JFrame("Przesuwanie kształtów.");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
 

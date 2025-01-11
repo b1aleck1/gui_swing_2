@@ -5,6 +5,14 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+/*
+Zadanie 3.
+
+Program po kliknięciu myszką w wybrany kształt zaczyna odliczać czas do ponownego jego kliknięcia.
+Po ponownym kliknięciu ksztatł zostaje przesunięty proporcjonalnie do czasu, który upłynął od pierwszego kliknięcia.
+Czasy oraz różnica jest wyświetlana w konsoli.
+ */
+
 public class SimpleShapeMover extends JPanel {
     private final ArrayList<Shape> shapes;
     private Shape selectedShape;

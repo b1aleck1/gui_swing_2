@@ -1,4 +1,4 @@
-package test;
+package zad_z_lab;
 
 import javax.swing.*;
 import java.awt.*;

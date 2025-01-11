@@ -4,6 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/*
+Zadanie 1.
+
+Po najechaniu i kliknięciu w wybranym miejscu na panelu pokazują się współrzędne miejsca na ekranie.
+Następnie klawisz ENTER czyści wyświetloną informację.
+ */
+
 public class Coordinates {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> createAndShowGUI());

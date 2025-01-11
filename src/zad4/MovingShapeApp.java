@@ -5,6 +5,14 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/*
+Zadanie 4.
+
+Program pozwala na przesuwanie wybranej figury po panelu za pomocą strzałek.
+Wybrana aktualnie figura jest podświetlana na czerwono.
+Figury można zmieniać wciskając klawisz Tab.
+ */
+
 public class MovingShapeApp {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> createAndShowGUI());

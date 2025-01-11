@@ -4,6 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/*
+Zadanie 5.
+
+Program wyświetla w konsoli informacje o tym, gdzie aktualnie znajduje się kursor
+oraz gdzie przycisk został wciśnięty i zwolniony.
+Za pomocą kółka myszy można powiększać i pomniejszać figurę znajdującą się w panelu.
+Informacja o tym również wyświetla się w konsoli.
+ */
+
 public class DrawInfo {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> createAndShowGUI());
