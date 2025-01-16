@@ -2,6 +2,8 @@ package zad_z_lab;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Random;
@@ -38,7 +40,7 @@ public class Tetris {
             setBackground(Color.BLACK);
             spawnNewShape();
 
-            Timer timer = new Timer(50, e -> {
+            Timer timer = new Timer(200, e -> {
                 if (!gameOver) {
                     moveDown();
                     repaint();
@@ -51,6 +53,22 @@ public class Tetris {
                 public void mouseClicked(MouseEvent e) {
                     if (!gameOver) {
                         rotateShape();
+                        repaint();
+                    }
+                }
+            });
+
+            setFocusable(true);
+            addKeyListener(new KeyAdapter() {
+                @Override
+                public void keyPressed(KeyEvent e) {
+                    if (!gameOver) {
+                        switch (e.getKeyCode()) {
+                            case KeyEvent.VK_LEFT -> moveShape(-1);
+                            case KeyEvent.VK_RIGHT -> moveShape(1);
+                            case KeyEvent.VK_DOWN -> moveDown();
+                            case KeyEvent.VK_SPACE -> rotateShape();
+                        }
                         repaint();
                     }
                 }
@@ -102,6 +120,12 @@ public class Tetris {
                 placeShape();
                 clearLines();
                 spawnNewShape();
+            }
+        }
+
+        private void moveShape(int deltaX) {
+            if (canPlaceShape(currentX + deltaX, currentY)) {
+                currentX += deltaX;
             }
         }
 
@@ -171,6 +195,7 @@ public class Tetris {
             frame.setResizable(false);
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
+            game.requestFocusInWindow();
         });
     }
 }
